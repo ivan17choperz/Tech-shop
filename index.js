@@ -145,7 +145,6 @@ $quitTrolley.addEventListener('click',(e)=>{
 let arrayFinalBuy = [];
 
 function buyFinal() {
-  let $alert = document.querySelector('.alert-of-buy');
-   $alert.innerHTML=`<h1> Feleicidades por tu compra</h1>`   
+ 
 }
 

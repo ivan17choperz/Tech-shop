@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body >
+
+    <nav class="deep-purple">
+        <div class="container">
+           
+                <a href="" class="brand-logo">Shop of Tech</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="">HOME</a></li>
+                    <li class="active"><a href="" >SHOP</a></li>
+                    <li><a href="">ABOUT</a></li>
+                </ul>
+            
+        </div>
+      </nav>
+
+    <!-- cards  -->
+    <section>
+        <div class="side-nav">
+            <a class="btn">
+                <i class="material-icons-outlined">                                
+                    person_outline                                    
+                </i>
+                <h3>Login</h3>
+            </a>
+            <a class="btn">
+                <i class="material-icons-outlined">                                
+                    notifications                                    
+                </i>
+                <h3>Notification</h3>
+            </a>
+            <a class="btn">
+                <i class="material-icons-outlined">                                
+                    settings                                   
+                </i>
+                <h3>Settings</h3>
+            </a>
+            <a class="btn">
+                <i class="material-icons-outlined">                                
+                    logout                                    
+                </i>
+                <h3>Logout</h3>
+            </a>
+        </div>
+        <div class="container">
+                <div  class="panel-cards" id="panel-cards">
+
+                </div>                
+        </div>
+    </section>
+    <!-- trolley of shoppping -->
+    <div class="btn-activate" id="btn-trolly">
+        <div class="count">
+            <h1>0</h1>
+        </div>
+        <div class="icon">
+            <i class="material-icons-outlined">
+                shopping_cart
+            </i>
+        </div>
+    </div>
+    <section class="trolley display-none">
+        <div class="CarOfShoping ">
+            <div class="carTitle">
+                <h1>Shopping list</h1>
+            </div>
+            <div class="carGrid" id="carGrid">
+
+            </div>
+            <div class="carOptions">
+                
+                <div class="btns">
+                    <a class="btn" id="close" >Close</a>
+                    <a class="btn to-buy">To Buy</a>
+                    <a class="btn empty">Empty Trolley</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="pre-loading">
+        <img src="./assets/animation.svg">
+        <h1>loading</h1>
+    </div>
+    <div class="alert-of-buy">
+        
+    </div>
+    <!-- archivos js -->
+   
+    <script src="./index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

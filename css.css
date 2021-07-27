@@ -1,0 +1,775 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+*{
+    margin:0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: #F1F6F9;
+    
+}
+img{
+    max-width: 300px;
+    max-height: 250px;
+}
+nav {
+    background:#14274E;
+    width: 100%;
+    height: 75px;    
+    top: 0%;    
+    position: sticky;
+    z-index: 300;
+}
+nav .container{
+    width:80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .container .brand-logo{
+    max-width: 250px;
+    font-size: 35px;
+    color: #F1F6F9;
+    font-weight: 700;
+    text-decoration:none ;
+}
+nav .container ul{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+nav .container ul li{
+    list-style: none;
+}
+nav .container ul li a{
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 20px 20px;
+    font-size: 20px;
+    color: #F1F6F9;
+    font-weight:700;
+    text-decoration:none ;
+    
+}
+nav .container ul li a:hover{
+    border-bottom: 3px solid #F1F6F9;
+    transition: 100ms ease-in-out;
+}
+section {
+    display: flex;
+    width: 100%;
+    min-height:800px;
+    margin: 50px 0px;
+    justify-content: space-between;
+}
+section .side-nav{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50px;
+    height: 100%;
+    background: #9BA4B4;
+    position: fixed;
+    margin: -50px 0px;
+    overflow: hidden;
+    transition: 300ms ease;    
+    box-shadow: -5px 0px 15px rgb(131, 131, 131); 
+    z-index: 200;   
+}
+section .side-nav:hover{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 200px;
+    height: 100%;
+    background: #9BA4B4;
+    position: fixed;
+    z-index: 200;
+    transition: 300ms ease;
+    
+    cursor: pointer;
+    box-shadow: 8px 0px 15px #14274E;
+}
+section .side-nav .btn{
+    display: flex;
+    position: static;
+    padding: 20% 15px;    
+    
+}
+section .side-nav .btn:hover{
+    background: #14274E;
+    width: 100%;
+    height: 80px;
+    height: auto;
+    color: #F1F6F9;
+    
+    
+}
+section .side-nav .btn i{
+    margin-right: 30px;
+}
+
+section .container{
+    width: 95%;
+    height: 100%;
+    margin: auto;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .container .panel-cards{
+    
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 30px;
+    grid-auto-rows:minmax(150px,400px);
+    grid-template-columns: repeat(auto-fill,minmax(100px,300px));
+    justify-self: center;
+    align-self: center;
+    margin-left: 50px;
+    
+}
+.card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: #FFF;
+    box-shadow: 3px 3px 15px #969696;
+}
+.card .card-image{
+    width: 100%;
+    max-height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;      
+    flex-direction: column;
+    position: relative;  
+}
+.card .card-image img{
+    width: 95%;
+    height: 100%;
+}
+.card .card-content{
+    width: 100%;
+    max-height: 50%;
+    display: flex;
+    flex-direction: column;
+    padding:10px 10px;
+    justify-content: space-between;
+    align-items: center;
+    color:#394867;
+    position: relative;
+}
+.card .card-content p{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    max-height: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.card .card-content h3{
+    width: 100%;
+    max-height: 50px;
+    text-align: center;
+    font-size: 35px;
+    
+}
+.card .card-content h2{
+    max-height: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 400;
+}
+.card .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    min-width:60px;
+    min-height:60px;
+    background: #394867;
+    border-radius: 50%;
+    left: 90%;
+    top: -15%;
+    animation-name: btn_card;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    cursor: pointer;
+    font-size: 35px;
+    color:#F1F6F9;
+}
+
+@keyframes btn_card{
+    0%{
+        box-shadow:-3px 3px 6px #14274E,3px -3px 6px #14274E,3px 3px 6px #14274E,-3px -3px 6px #14274E;
+    }
+    17%{
+        box-shadow:-6px 6px 12px #14274E,6px -6px 12px #14274E,6px 6px 12px #14274E,-6px -6px 12px #14274E;
+
+    }
+    34%{
+        box-shadow:-9px 9px 18px #14274E,9px -9px 18px #14274E,9px 9px 18px #14274E,-9px -9px 18px #14274E;
+
+    }
+    51%{
+        box-shadow:-9px 9px 18px #14274E,9px -9px 18px #14274E,9px 9px 18px #14274E,-9px -9px 18px #14274E;
+
+    }
+    68%{
+        box-shadow:-6px 6px 12px #14274E,6px -6px 12px #14274E,6px 6px 12px #14274E,-6px -6px 12px #14274E;
+        
+    }
+    100%{
+        box-shadow:-3px 3px 6px #14274E,3px -3px 6px #14274E,3px 3px 6px #14274E,-3px -3px 6px #14274E;
+    }
+}
+
+.trolley {
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    top: 5%;
+    transition: 300ms ease;
+}
+.trolley .CarOfShoping{
+    width: 87%;
+    max-height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFF;
+    padding: 20px;
+    box-shadow: 0px 6px 20px #969696;
+    margin-left: 15px;
+}
+.trolley .CarOfShoping .carTitle{
+    width: 100%;
+    max-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.trolley .CarOfShoping .carGrid{
+    width: 100%;
+    min-height: 50px;
+    display: grid;
+    gap: 10px;
+    grid-auto-columns: 1fr;
+    grid-template-rows: repeat(auto-fill,minmax(50px,100px));
+    padding: 20px;
+    overflow: scroll;
+    margin-bottom: 30px;
+
+}
+.trolley .CarOfShoping .carGrid::-webkit-scrollbar{
+    display: none;
+
+}
+.trolley .CarOfShoping .carGrid .rowArticle{
+    width: 100%;
+    max-height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+
+}
+.trolley .CarOfShoping .carGrid .rowArticle img{
+    max-width: 100px;
+    max-height: 100px;
+}
+.trolley .CarOfShoping .carGrid .rowArticle input{
+    text-transform: uppercase;
+    padding: 5px;
+    font-size: 20px;
+    cursor: text;
+    max-width: 50px;
+    max-height: 30px;
+}
+.trolley .CarOfShoping .carGrid .rowArticle button{
+    text-transform: uppercase;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.trolley .CarOfShoping .carGrid .rowArticle button:nth-child(1){
+    background: #14274E;
+    color: #F1F6F9;
+    border:none
+}
+.trolley .CarOfShoping .carGrid .rowArticle button:nth-child(2){
+    background: #394867;
+    color: #F1F6F9;
+    border:none
+}
+.trolley .CarOfShoping .carOptions{
+    width: 100%;
+    max-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.trolley .CarOfShoping .carOptions .btns {
+    display: flex;
+}
+.trolley .CarOfShoping .carOptions .btns .btn{
+    display: flex;
+    padding:20px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+.trolley .CarOfShoping .carOptions .btns .btn:nth-child(3){
+    background: #14274E;
+    color: #F1F6F9;
+    margin-left: 20px;
+}
+.trolley .CarOfShoping .carOptions .btns .btn:nth-child(2){
+    background: #14274E;
+    color: #F1F6F9;
+    margin-left: 20px;
+}
+.trolley .CarOfShoping .carOptions .btns .btn:nth-child(1):hover{
+    background: #394867;
+    color: #F1F6F9;
+    
+}
+.trolley .CarOfShoping .carOptions .btns .btn:nth-child(1){
+    background: #F1F6F9;
+    color: #969696;
+    
+}
+.trolley .CarOfShoping .carOptions .btns .btn:hover{
+    opacity: .8;
+    transition: 300ms ease;
+    cursor: pointer;
+}
+.btn-activate{
+    background: #FFF;
+    width: 100px;
+    height: 100px;
+    box-shadow: 3px 3px 10px #394867,-3px 3px 10px #394867,3px -3px 10px #394867,-3px -3px 10px #394867;
+    position: fixed;
+    top: 80%;
+    left: 90%;
+    z-index: 1000;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+    
+}
+.btn-activate:hover{
+    box-shadow: 3px 3px 30px #394867,-3px 3px 30px #394867,3px -3px 30px #394867,-3px -3px 30px #394867;
+    transition: 300ms ease-in-out;    
+}
+.btn-activate .count {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    top:0%;
+    right: 75%;
+    border-radius: 50%;
+    background: #14274E;
+    color: #F1F6F9;
+
+
+}
+.btn-activate .icon{
+    display: flex;
+}
+.btn-activate .icon i{
+    font-size: 50px;
+    color: #14274E;
+}
+.display-none{
+    display: none;    
+}
+.pre-loading{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 1500;
+    top: 0%;
+    background: #FFF;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: .9;
+}
+.pre-loading img{
+    margin-bottom: 20px;
+}
+.pre-loading h1{
+    text-transform: uppercase;
+    font-size: 35px;
+}
+.alert-of-buy{
+    position: absolute;
+    max-width: 200px;
+    max-height:250px;
+    z-index: 2000;
+    top: 10%;
+    right: 20%;
+    background: #FFF;
+    text-align: center;
+}
+@media only screen and (max-width:600px){
+    nav .container ul{
+        display:none;
+    }
+    nav .container{
+        justify-content: center;
+    }
+    .btn-activate{
+        background: #FFF;
+        width: 80px;
+        height: 80px;
+        box-shadow: 3px 3px 10px #394867,-3px 3px 10px #394867,3px -3px 10px #394867,-3px -3px 10px #394867;
+        position: fixed;
+        top: 80%;
+        left: 5%;
+        
+    }
+    .card .btn{
+        left: 80%;
+        top: -15%;
+    }
+    section .container{
+        margin:50px auto;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height:800px;
+        margin: 0px 0px;
+        justify-content: center;
+        align-items: center;
+    }
+    section .side-nav{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;        
+        width: 100%;
+        height: 70px;
+        background: #9BA4B4;
+        position: fixed;
+        top: 98%;        
+        transition: 300ms ease;    
+        z-index: 200;   
+    }
+
+    section .side-nav:hover{
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        flex-direction: row;
+        padding:0px 0px;
+        width: 100%;
+        height: 70px;
+        background: #9BA4B4;
+        position: fixed;
+        z-index: 200;
+        transition: 300ms ease;        
+        cursor: pointer;
+        box-shadow: 0px -18px 15px #394867;
+        
+    }
+    section .side-nav .btn{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    section .side-nav .btn:hover{
+        background: #14274E;
+        width: 100%;
+        height: auto;
+        color: #F1F6F9;
+        
+        
+    }
+    section .side-nav .btn i{
+        margin-right: 0px;
+    }
+    section .side-nav .btn h3{
+        display: none;
+    }
+    section .container .panel-cards{
+    
+         margin-left : 0px;
+    }
+    .trolley .CarOfShoping{
+        width: 87%;
+        max-height: 450px;
+    }
+    .trolley .CarOfShoping .carGrid{
+        width: 100%;
+        max-height: 400px;
+        display: grid;
+        gap: 20px;
+        grid-auto-columns:  repeat(auto-fill,minmax(80px,200px));
+        grid-template-rows: 1fr;
+        padding: 20px;
+        overflow: scroll;
+        
+    
+    }
+    .trolley .CarOfShoping .carGrid .rowArticle{
+        width: 100%;
+        max-height: 250px;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    .trolley .CarOfShoping .carOptions{
+        max-height: 250px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .trolley .CarOfShoping .carOptions .btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .trolley .CarOfShoping .carOptions .btns .btn{
+        display: flex;
+        width: 100%;
+        padding:10px;
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 7px ;
+    }
+    .trolley .CarOfShoping .carOptions .btns .btn:nth-child(2){
+        margin-left: 0px;
+    }
+    .trolley .CarOfShoping .carOptions .btns .btn:nth-child(3){
+        margin-left: 0px;
+    }
+    .pre-loading{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: fixed;
+        z-index: 1500;
+        top: 0%;
+        background: #FFF;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .pre-loading img{
+        margin-bottom: 20px;
+    }
+    .pre-loading h1{
+        text-transform: uppercase;
+        font-size: 35px;
+    }
+}
+@media only screen and (max-width:1024px){
+    nav .container ul{
+        display:none;
+    }
+    nav .container{
+        justify-content: center;
+    }
+    .btn-activate{
+        background: #FFF;
+        width: 80px;
+        height: 80px;
+        box-shadow: 3px 3px 10px #394867,-3px 3px 10px #394867,3px -3px 10px #394867,-3px -3px 10px #394867;
+        position: fixed;
+        top: 80%;
+        left: 5%;
+        
+    }
+    .card .btn{
+        left: 80%;
+        top: -15%;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height:800px;
+        margin: 0px 0px;
+        justify-content: center;
+        align-items: center;
+    }
+    section .container{
+       margin: 50px 50px;
+       justify-content: center;
+       align-items: center;
+       padding: 30px;
+    }
+    section .side-nav{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;        
+        width: 100%;
+        height: 70px;
+        background: #9BA4B4;
+        position: fixed;
+        top: 98%;        
+        transition: 300ms ease;    
+        z-index: 200;   
+    }
+
+    section .side-nav:hover{
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        flex-direction: row;
+        padding:0px 0px;
+        width: 100%;
+        height: 70px;
+        background: #9BA4B4;
+        position: fixed;
+        z-index: 200;
+        transition: 300ms ease;        
+        cursor: pointer;
+        box-shadow: 0px -18px 15px #394867;
+        
+    }
+    section .side-nav .btn{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    section .side-nav .btn:hover{
+        background: #14274E;
+        width: 100%;
+        height: auto;
+        color: #F1F6F9;
+        
+        
+    }
+    section .side-nav .btn i{
+        margin-right: 0px;
+    }
+    section .side-nav .btn h3{
+        display: none;
+    }
+    section .container .panel-cards{
+    
+        margin-left : 20px;
+   }
+    .trolley .CarOfShoping{
+        width: 87%;
+        max-height: 550px;
+    }
+    .trolley .CarOfShoping .carGrid{
+        width: 100%;
+        max-height: 400px;
+        display: grid;
+        gap: 20px;
+        grid-auto-columns:  repeat(auto-fill,minmax(80px,200px));
+        grid-template-rows: 1fr;
+        padding: 20px;
+        overflow: scroll;
+        align-self: center;
+        justify-self: center;
+        
+    
+    }
+    .trolley .CarOfShoping .carGrid .rowArticle{
+        width: 100%;
+        max-height: 250px;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+    
+    }
+
+    .trolley .CarOfShoping .carOptions{
+        max-height: 250px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .trolley .CarOfShoping .carOptions .btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .trolley .CarOfShoping .carOptions .btns .btn{
+        display: flex;
+        width: 100%;
+        padding:10px;
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 7px ;
+    }
+    .trolley .CarOfShoping .carOptions .btns .btn:nth-child(2){
+        margin-left: 0px;
+    }
+    .trolley .CarOfShoping .carOptions .btns .btn:nth-child(3){
+        margin-left: 0px;
+    }
+    .pre-loading{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: fixed;
+        z-index: 1500;
+        top: 0%;
+        background: #FFF;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .pre-loading img{
+        margin-bottom: 20px;
+    }
+    .pre-loading h1{
+        text-transform: uppercase;
+        font-size: 35px;
+    }
+}
+
